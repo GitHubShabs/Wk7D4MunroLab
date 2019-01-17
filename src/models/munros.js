@@ -14,7 +14,11 @@ Munros.prototype.getData = function () {
   const myPromise = request.get();
   myPromise.then((data) => {
     console.log(data);
+    this.data = data.message;
+    PubSub.publish('Munros:munros-data-ready', this.data);
   })
+  .catch((err) =>{
+    console.error(err);
   })
 };
 
