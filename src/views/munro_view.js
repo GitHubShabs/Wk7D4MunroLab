@@ -5,7 +5,7 @@ const MunroView = function (container, munro) {
 }
 
 MunroView.prototype.render = function () {
-  const munroContainer = document.createElement('p');
+  const munroContainer = document.createElement('h3');
   munroContainer.textContent = this.munro.name;
 // placeholder
 // placeholder
